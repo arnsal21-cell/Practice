@@ -1,47 +1,89 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>12 Times Table</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            margin: 0;
-            padding: 20px;
-        }
-        h2 {
-            text-align: center;
-            color: #2c3e50;
-        }
-        #output {
-            max-width: 400px;
-            margin: 20px auto;
-            padding: 15px;
-            background: #ffffff;
-            border: 2px solid #3498db;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            line-height: 1.6;
-            font-size: 18px;
-            color: #333;
-        }
-        #output span {
-            display: block;
-            padding: 5px 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>My Favorite Animal: Dolphins</title>
+  <style>
+    /* Background */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Animated Title */
+    h1 {
+      font-size: 3em;
+      color: #004080;
+      animation: slideIn 2s ease-out;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Image Styling + Hover Zoom */
+    img {
+      width: 300px;
+      border-radius: 15px;
+      transition: transform 0.5s;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Paragraph Styling */
+    p {
+      font-size: 1.2em;
+      color: #333;
+      margin: 20px;
+      animation: fadeIn 3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Button Styling + Hover Effect */
+    button {
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0073e6;
+    }
+  </style>
 </head>
 <body>
-    <h2>Multiplication Table of 12</h2>
-    <div id="output"></div>
+  <!-- Heading -->
+  <h1>My Favorite Animal: Dolphins</h1>
 
-    <script>
-        let text = "";
-        for (let i = 1; i <= 12; i++) {
-            text += "<span>12 × " + i + " = " + (12 * i) + "</span>";
-        }
-        document.getElementById("output").innerHTML = text;
-    </script>
+  <!-- Image -->
+  <img id="myImage" src="dolpin.jpg" style="width:200px"><br>
+  <!-- Paragraph -->
+  <p>Dolphins are my favorite animal because they are intelligent, playful, and friendly. 
+     They communicate with each other in fascinating ways and love to swim and jump in the ocean.</p>
+
+  <!-- Interactive Button -->
+  <button onclick="showFact()">Click to learn a fun fact!</button>
+
+  <!-- JavaScript -->
+  <script>
+    function showFact() {
+      alert("Fun Fact: Dolphins can recognize themselves in a mirror!");
+    }
+  </script>
 </body>
 </html>
