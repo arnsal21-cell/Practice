@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>12 Times Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        #output {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 15px;
+            background: #ffffff;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            line-height: 1.6;
+            font-size: 18px;
+            color: #333;
+        }
+        #output span {
+            display: block;
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Multiplication Table of 12</h2>
+    <div id="output"></div>
+
+    <script>
+        let text = "";
+        for (let i = 1; i <= 12; i++) {
+            text += "<span>12 × " + i + " = " + (12 * i) + "</span>";
+        }
+        document.getElementById("output").innerHTML = text;
+    </script>
+</body>
+</html>
